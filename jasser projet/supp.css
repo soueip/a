@@ -1,0 +1,36 @@
+*{
+	padding: 0;margin: 0;font-family: century gothic
+}
+body{
+
+	background-color: #F3F6F6;
+}
+
+
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%)
+}
+.title h1{
+	color: #fff;
+	font-size: 25px
+}
+.b{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.btn1{
+	border:1px solid #fff;
+	padding: 10px 30px;
+	
+	text-decoration: none;
+	
+	color: #7A4453;
+	
+	background-color: #fff;
+	border-radius: 10px;
+}

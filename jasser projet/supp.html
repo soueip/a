@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="supp.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+</head>
+<body>
+
+<div class="title">
+		<h1>Suppression faite avec succées ! </h1>
+		
+
+		
+	</div>
+	<div class="b">
+		<a href="affichaage.php" class="btn1">Revenir à l'affichage</a>
+		
+	</div>
+<?php
+
+
+$x=$_GET['i'];
+include  "connexioncv.php";
+
+$requete = "DELETE FROM contact WHERE id=$x";
+
+$resultat = $mysqli->query($requete) or die ($mysqli->error());
+?>
+<br><br></body>
+</html>

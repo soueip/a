@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<link rel="stylesheet" type="text/css" href="insert.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insertion</title>
+</head>
+
+<body>
+	
+	<header>
+		<nav>
+		<ul>
+			<li class="a"><a href="Accueil.html">ACCUEIL</a></li>
+			<li><a href="apropos.html">A PROPOS</a></li>
+			<li><a href="education.html">EDUCATION</a></li>
+			<li><a href="experience.html">EXPERIENCE</a></li>
+			<li><a href="competence.html">COMPETENCES</a></li>
+			<li><a href="contact.html">CONTACTEZ MOI</a></li>
+		</ul>
+		</nav>
+		<div class="title">
+		<h1>votre formulaire a été envoyé avec succès ! </h1>
+		
+
+		
+	</div>
+	<div class="b">
+		<a href="Accueil.php" class="btn1">Revenir à l'accueil</a>
+		<a href="#" class="btn">Imprimer cv</a>
+	</div>
+	
+</header>
+<?php
+include "connexioncv.php";
+$a=$_POST ['nom'];
+$c=$_POST ['entreprise'];
+$p=$_POST ['email'];
+$n=$_POST ['telephone'];
+$e=$_POST ['msg'];
+$requete="INSERT INTO contact (nom,entreprise,email,telephone,msg) VALUES('$a','$c','$p','$n','$e')";
+//echo $requete;
+$resultat=$mysqli->query($requete) or die ($mysqli->error());
+
+//else echo "erreur";
+?>
+</body></html>

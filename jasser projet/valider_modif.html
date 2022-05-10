@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+	padding: 0;margin: 0;font-family: century gothic
+}
+body{
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("profil.jpg");
+}   
+
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%)
+}
+.title h1{
+	color: #fff;
+	font-size: 25px
+}
+.b{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.btn1{
+	border:1px solid #fff;
+	padding: 10px 30px;
+	
+	text-decoration: none;
+	
+	color: #7A4453;
+	
+	background-color: #fff;
+	border-radius: 10px;
+}
+	</style>
+</head>
+<body>
+
+<div class="title">
+		<h1>Modification faite avec succès </h1>
+		
+
+		
+	</div>
+	<div class="b">
+		<a href="affichaage.php" class="btn1">Afficher les données</a>
+		
+	</div>
+
+
+	<?php
+	//recupération de l'identifiant à supprimer
+	$id=$_GET['id'];
+	//commentaire1: récupération des données du formulaire
+	
+	$nom=$_POST['nom'];
+	$entreprise=$_POST['entreprise'];
+	$email=$_POST['email'];
+	$telephone=$_POST['telephone'];
+	$msg=$_POST['msg'];
+	//connexion à la BD
+	include "connexioncv.php";
+	
+	//construction de la requête de modification
+	$req1 = "UPDATE contact SET nom = '$nom',entreprise='$entreprise' ,email = '$email', telephone= '$telephone',msg='$msg' WHERE id=$id";
+	
+	//exécution de la requête de modification
+	$mysqli->query($req1) or die ('Erreur '.$req1.' '.$mysqli->error());
+	
+	echo "<br><br>";
+	?>
+<table align="center">
+		<tr><td align="center"><a href="afficher.php"> </a></td></tr>	
+</table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+/* mouse over element */
+      div:hover {
+          color: tomato;
+      } 
+
+/* selected link */
+      a:active{
+          color: #0000FF
+      }
+      
+/* center element */
+	.flexelement{
+	display: flex;
+	justify-content: center;
+	align-ithems: center;
+	}
+/*tableu delement*/
+	.row-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-ithems: center;
+	}
+	.colimn-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-ithems: center;
+	}
+/*tarja3 lel star ki ybdou brcha elements 
+display: flex;
+    flex-wrap: wrap;
+/*tbdel coleur imag svg
+fill: a3teha coeur ;
+/*ithem men foug
+z-index:9999999999;
+
+/*info lia ane
+	display flex t7othom bjanb b3thom 
+	img object-fit:cover
+
+/* flexing website selon divice */
+/* Extra small devices */
+	@media (max-width: 576px) { /* ... */ } 
+/* Small devices (landscape phones, 576px and up)  */
+	@media (min-width: 576px) and (max-width: 768px) { /* ... */ } 
+ /* Medium devices (tablets, 768px and up)  */
+	@media (min-width: 768px) and (max-width: 992px)  { /* ... */ } 
+ /* Large devices (desktops, 992px and up)  */
+	@media (min-width: 992px) and (max-width: 1200px)  { /* ... */ } 
+ /* Extra large devices (large desktops, 1200px and up)  */
+	@media (min-width: 1200px) { /* ... */ } 
